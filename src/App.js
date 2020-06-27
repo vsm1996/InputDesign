@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import FieldInput from "./components/fieldInput/fieldInput";
+import FieldOutput from "./components/fieldOutput/fieldOutput";
+
+class App extends Component {
+  state = {
+    firstName: "",
+    lastName: "",
+  };
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+  render() {
+    const { firstName, lastName } = this.state;
+    return (
+      <div className="App">
+        <FieldOutput firstName={firstName} lastName={lastName} />
+        <FieldInput
+          firstName={firstName}
+          lastName={lastName}
+          handleChange={this.handleChange}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;

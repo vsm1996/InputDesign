@@ -1,3 +1,9 @@
+Hello All!
+
+This is a very simple Input App, that displays the input value above the form. In this case, I am using first and last names to output
+'Hi, [firstname][lastname]'.
+I created this project for the sole purpose of getting a short taste of design. I used MaterialUi's Form, Input, and Field Compontents, as well as Google Font's Lobster font. I also experimented with a Salmon and Grey color scheme. Feel to check it out.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
